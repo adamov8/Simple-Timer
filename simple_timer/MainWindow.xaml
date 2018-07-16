@@ -5,16 +5,51 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:simple_timer"
         mc:Ignorable="d"
-        Title="Simple Timer" Height="350" Width="525" Background="Gray">
-    <Grid Background="White">
-        <Button x:Name="timer_start_1" Content="(Re)Start" HorizontalAlignment="Left" Margin="55,79,0,0" VerticalAlignment="Top" Width="75" Click="timer_start_1_Click"/>
-        <Button x:Name="timer_pause_1" Content="Stop" HorizontalAlignment="Left" Margin="55,112,0,0" VerticalAlignment="Top" Width="75" Click="timer_pause_1_Click" Loaded="timer_pause_1_Loaded"/>
-        <Button x:Name="timer_reset_1" Content="Reset" HorizontalAlignment="Left" Margin="347,50,0,0" VerticalAlignment="Top" Width="75" Click="timer_reset_1_Click"/>
-        <Label x:Name="timer_label_h"  HorizontalAlignment="Left" Margin="167,94,0,0" VerticalAlignment="Top" Height="38" Width="35" Content="0"/>
-        <Label x:Name="timer_label_m"  HorizontalAlignment="Left" Margin="220,94,0,0" VerticalAlignment="Top" Height="38" Width="35" Content="0"/>
-        <Label x:Name="timer_label_s"  HorizontalAlignment="Left" Margin="273,94,0,0" VerticalAlignment="Top" Height="38" Width="35" Content="0"/>
-        <ComboBox x:Name="comboBox_h" HorizontalAlignment="Left" Margin="154,50,0,0" VerticalAlignment="Top" Width="48" SelectedIndex="0" MaxDropDownHeight="200" Loaded="comboBox_h_Loaded" />
-        <ComboBox x:Name="comboBox_m" HorizontalAlignment="Left" Margin="207,50,0,0" VerticalAlignment="Top" Width="48" SelectedIndex="0" MaxDropDownHeight="200" Loaded="comboBox_m_Loaded" />
-        <ComboBox x:Name="comboBox_s" HorizontalAlignment="Left" Margin="260,50,0,0" VerticalAlignment="Top" Width="48" SelectedIndex="0" MaxDropDownHeight="200" Loaded="comboBox_s_Loaded" />
+        Title="Simple Timer" Height="350" Width="400" MaxHeight="350" MaxWidth="400" MinHeight="350" MinWidth="400" Background="Gray" Icon="Timer_16x.png">
+    <Grid Background="Black">
+        <Button x:Name="timer_start_1" Content="(Re)Start" HorizontalAlignment="Left" Margin="6,35,0,0" VerticalAlignment="Top" Width="75" Click="timer_start_1_Click" Background="#FFCADDFF"/>
+        <Button x:Name="timer_pause_1" Content="Stop" HorizontalAlignment="Left" Margin="6,68,0,0" VerticalAlignment="Top" Width="75" Click="timer_pause_1_Click" Loaded="timer_pause_1_Loaded" Background="#FFCADDFF"/>
+        <Button x:Name="timer_reset_1" Content="Reset" HorizontalAlignment="Left" Margin="298,6,0,0" VerticalAlignment="Top" Width="75" Click="timer_reset_1_Click" Background="#FFCADDFF"/>
+        <Label x:Name="timer_label_h"  HorizontalAlignment="Left" Margin="105,50,0,0" VerticalAlignment="Top" Height="38" Width="48" Content="0" FontWeight="Bold" FontSize="20" Foreground="White"/>
+        <Label x:Name="timer_label_m"  HorizontalAlignment="Left" Margin="158,50,0,0" VerticalAlignment="Top" Height="38" Width="48" Content="0" FontWeight="Bold" FontSize="20" Foreground="White"/>
+        <Label x:Name="timer_label_s"  HorizontalAlignment="Left" Margin="211,50,0,0" VerticalAlignment="Top" Height="38" Width="48" Content="0" FontSize="20" FontWeight="Bold" Foreground="White"/>
+        <ComboBox x:Name="comboBox_h" HorizontalAlignment="Left" Margin="105,6,0,0" VerticalAlignment="Top" Width="48" SelectedIndex="0" MaxDropDownHeight="200" Loaded="comboBox_h_Loaded" />
+        <ComboBox x:Name="comboBox_m" HorizontalAlignment="Left" Margin="158,6,0,0" VerticalAlignment="Top" Width="48" SelectedIndex="0" MaxDropDownHeight="200" Loaded="comboBox_m_Loaded" />
+        <ComboBox x:Name="comboBox_s" HorizontalAlignment="Left" Margin="211,6,0,0" VerticalAlignment="Top" Width="48" SelectedIndex="0" MaxDropDownHeight="200" Loaded="comboBox_s_Loaded" />
+        <Label x:Name="sep11" Content=":" HorizontalAlignment="Left" Margin="140,50,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="18" Width="18" Foreground="White"/>
+        <Label x:Name="sep12" Content=":" HorizontalAlignment="Left" Margin="188,50,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="18" Width="18" Foreground="White"/>
+        <Label x:Name="h1" Content="Hour" HorizontalAlignment="Left" Margin="108,27,0,0" VerticalAlignment="Top" Foreground="White" FontSize="10"/>
+        <Label x:Name="m1" Content="Min" HorizontalAlignment="Left" Margin="163,27,0,0" VerticalAlignment="Top" Foreground="White" FontSize="10"/>
+        <Label x:Name="s1" Content="Sec" HorizontalAlignment="Left" Margin="222,28,0,0" VerticalAlignment="Top" Foreground="White" FontSize="10"/>
+
+        <Button x:Name="timer_start_2" Content="(Re)Start" HorizontalAlignment="Left" Margin="6,147,0,0" VerticalAlignment="Top" Width="75" Click="timer_start_2_Click" Background="#FFCADDFF"/>
+        <Button x:Name="timer_pause_2" Content="Stop" HorizontalAlignment="Left" Margin="6,180,0,0" VerticalAlignment="Top" Width="75" Click="timer_pause_2_Click" Loaded="timer_pause_2_Loaded" Background="#FFCADDFF"/>
+        <Button x:Name="timer_reset_2" Content="Reset" HorizontalAlignment="Left" Margin="298,118,0,0" VerticalAlignment="Top" Width="75" Click="timer_reset_2_Click" Background="#FFCADDFF"/>
+        <Label x:Name="timer_label_h2"  HorizontalAlignment="Left" Margin="105,162,0,0" VerticalAlignment="Top" Height="38" Width="48" Content="0" FontWeight="Bold" FontSize="20" Foreground="White"/>
+        <Label x:Name="timer_label_m2"  HorizontalAlignment="Left" Margin="158,162,0,0" VerticalAlignment="Top" Height="38" Width="48" Content="0" FontWeight="Bold" FontSize="20" Foreground="White"/>
+        <Label x:Name="timer_label_s2"  HorizontalAlignment="Left" Margin="211,162,0,0" VerticalAlignment="Top" Height="38" Width="48" Content="0" FontSize="20" FontWeight="Bold" Foreground="White"/>
+        <ComboBox x:Name="comboBox_h2" HorizontalAlignment="Left" Margin="105,118,0,0" VerticalAlignment="Top" Width="48" SelectedIndex="0" MaxDropDownHeight="200" Loaded="comboBox_h2_Loaded" />
+        <ComboBox x:Name="comboBox_m2" HorizontalAlignment="Left" Margin="158,118,0,0" VerticalAlignment="Top" Width="48" SelectedIndex="0" MaxDropDownHeight="200" Loaded="comboBox_m2_Loaded" />
+        <ComboBox x:Name="comboBox_s2" HorizontalAlignment="Left" Margin="211,118,0,0" VerticalAlignment="Top" Width="48" SelectedIndex="0" MaxDropDownHeight="200" Loaded="comboBox_s2_Loaded" />
+        <Label x:Name="sep21" Content=":" HorizontalAlignment="Left" Margin="140,162,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="18" Width="18" Foreground="White"/>
+        <Label x:Name="sep22" Content=":" HorizontalAlignment="Left" Margin="188,162,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="18" Width="18" Foreground="White"/>
+        <Label x:Name="h2" Content="Hour" HorizontalAlignment="Left" Margin="108,139,0,0" VerticalAlignment="Top" Foreground="White" FontSize="10"/>
+        <Label x:Name="m2" Content="Min" HorizontalAlignment="Left" Margin="163,139,0,0" VerticalAlignment="Top" Foreground="White" FontSize="10"/>
+        <Label x:Name="s2" Content="Sec" HorizontalAlignment="Left" Margin="222,139,0,0" VerticalAlignment="Top" Foreground="White" FontSize="10"/>
+
+        <Button x:Name="timer_start_3" Content="(Re)Start" HorizontalAlignment="Left" Margin="6,251,0,0" VerticalAlignment="Top" Width="75" Click="timer_start_3_Click" Background="#FFCADDFF"/>
+        <Button x:Name="timer_pause_3" Content="Stop" HorizontalAlignment="Left" Margin="6,284,0,0" VerticalAlignment="Top" Width="75" Click="timer_pause_3_Click" Loaded="timer_pause_3_Loaded" Background="#FFCADDFF"/>
+        <Button x:Name="timer_reset_3" Content="Reset" HorizontalAlignment="Left" Margin="298,222,0,0" VerticalAlignment="Top" Width="75" Click="timer_reset_3_Click" Background="#FFCADDFF"/>
+        <Label x:Name="timer_label_h3"  HorizontalAlignment="Left" Margin="105,266,0,0" VerticalAlignment="Top" Height="38" Width="48" Content="0" FontWeight="Bold" FontSize="20" Foreground="White"/>
+        <Label x:Name="timer_label_m3"  HorizontalAlignment="Left" Margin="158,266,0,0" VerticalAlignment="Top" Height="38" Width="48" Content="0" FontWeight="Bold" FontSize="20" Foreground="White"/>
+        <Label x:Name="timer_label_s3"  HorizontalAlignment="Left" Margin="211,266,0,0" VerticalAlignment="Top" Height="38" Width="48" Content="0" FontSize="20" FontWeight="Bold" Foreground="White"/>
+        <ComboBox x:Name="comboBox_h3" HorizontalAlignment="Left" Margin="105,222,0,0" VerticalAlignment="Top" Width="48" SelectedIndex="0" MaxDropDownHeight="200" Loaded="comboBox_h3_Loaded" />
+        <ComboBox x:Name="comboBox_m3" HorizontalAlignment="Left" Margin="158,222,0,0" VerticalAlignment="Top" Width="48" SelectedIndex="0" MaxDropDownHeight="200" Loaded="comboBox_m3_Loaded" />
+        <ComboBox x:Name="comboBox_s3" HorizontalAlignment="Left" Margin="211,222,0,0" VerticalAlignment="Top" Width="48" SelectedIndex="0" MaxDropDownHeight="200" Loaded="comboBox_s3_Loaded" />
+        <Label x:Name="sep31" Content=":" HorizontalAlignment="Left" Margin="140,266,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="18" Width="18" Foreground="White"/>
+        <Label x:Name="sep32" Content=":" HorizontalAlignment="Left" Margin="188,266,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="18" Width="18" Foreground="White"/>
+        <Label x:Name="h3" Content="Hour" HorizontalAlignment="Left" Margin="108,244,0,0" VerticalAlignment="Top" Foreground="White" FontSize="10"/>
+        <Label x:Name="m3" Content="Min" HorizontalAlignment="Left" Margin="163,244,0,0" VerticalAlignment="Top" Foreground="White" FontSize="10"/>
+        <Label x:Name="s3" Content="Sec" HorizontalAlignment="Left" Margin="222,244,0,0" VerticalAlignment="Top" Foreground="White" FontSize="10"/>
     </Grid>
 </Window>

@@ -24,60 +24,24 @@ namespace simple_timer
             InitializeComponent();
         }
 
-        public int iv;
+        TimerLogic tm1 = new TimerLogic();
+        TimerLogic tm2 = new TimerLogic();
+        TimerLogic tm3 = new TimerLogic();
 
-        public static Timer t1 = new Timer(1000);
+        // Timer 1
         private void timer_start_1_Click(object sender, RoutedEventArgs e)
         {
-            int number;
-            bool convert_h = int.TryParse(comboBox_h.Text, out number);
-            bool convert_m = int.TryParse(comboBox_m.Text, out number);
-            bool convert_s = int.TryParse(comboBox_s.Text, out number);
-            if (convert_m && convert_m && convert_s)
-            {
-                iv = int.Parse(comboBox_h.Text) * 3600 + int.Parse(comboBox_m.Text) * 60 + int.Parse(comboBox_s.Text);
-            }
-
-            t1.Elapsed -= T1_Elapsed;
-            t1.Stop();
-            t1.Elapsed += T1_Elapsed;
-            timer_label_h.Content = iv / 3600;
-            timer_label_m.Content = (iv % 3600) / 60;
-            timer_label_s.Content = (iv % 3600) % 60;
-            t1.Start();
-
-            if(iv > 0)
-            {
-                timer_pause_1.IsEnabled = true;
-            }
+            tm1.Start(comboBox_h, comboBox_m,comboBox_s,timer_label_h,timer_label_m,timer_label_s,timer_pause_1,T1_Elapsed);
         }
 
         private void T1_Elapsed(object sender, ElapsedEventArgs e)
         {
-            if (iv > 0)
-            {
-                iv--;
-            }
-            App.Current.Dispatcher.Invoke((Action)delegate
-            {
-                timer_label_h.Content = iv / 3600;
-                timer_label_m.Content = (iv % 3600) / 60;
-                timer_label_s.Content = (iv % 3600) % 60;
-            });
+            tm1.Tick(timer_label_h, timer_label_m, timer_label_s);
         }
 
         private void timer_pause_1_Click(object sender, RoutedEventArgs e)
         {
-            if (t1.Enabled)
-            {
-                t1.Stop();
-                timer_pause_1.Content = "Resume";
-            }
-            else
-            {
-                t1.Start();
-                timer_pause_1.Content = "Stop";
-            }
+            tm1.Pause(timer_pause_1);
         }
         private void timer_pause_1_Loaded(object sender, RoutedEventArgs e)
         {
@@ -86,50 +50,102 @@ namespace simple_timer
 
         private void timer_reset_1_Click(object sender, RoutedEventArgs e)
         {
-            t1.Elapsed -= T1_Elapsed;
-            t1.Stop();
-            timer_label_h.Content = 0;
-            timer_label_m.Content = 0;
-            timer_label_s.Content = 0;
-
-            comboBox_h.SelectedIndex = 0;
-            comboBox_m.SelectedIndex = 0;
-            comboBox_s.SelectedIndex = 0;
-
-            timer_pause_1.IsEnabled = false;
+            tm1.Reset(comboBox_h, comboBox_m, comboBox_s, timer_label_h, timer_label_m, timer_label_s, timer_pause_1, T1_Elapsed);
         }
 
         private void comboBox_h_Loaded(object sender, RoutedEventArgs e)
         {
-            int[] hours = new int[24];
-            for (int h = 0; h < hours.Length; h++)
-            {
-                hours[h] = h;
-            }
-            comboBox_h.ItemsSource = hours;
-            comboBox_h.SelectedIndex = 0;
+            tm1.ComboHFill(comboBox_h);
         }
 
         private void comboBox_m_Loaded(object sender, RoutedEventArgs e)
         {
-            int[] minutes = new int[61];
-            for (int m = 0; m < minutes.Length; m++)
-            {
-                minutes[m] = m;
-            }
-            comboBox_m.ItemsSource = minutes;
-            comboBox_m.SelectedIndex = 0;
+            tm1.ComboMSFill(comboBox_m);
         }
 
         private void comboBox_s_Loaded(object sender, RoutedEventArgs e)
         {
-            int[] seconds = new int[61];
-            for (int s = 0; s < seconds.Length; s++)
-            {
-                seconds[s] = s;
-            }
-            comboBox_s.ItemsSource = seconds;
-            comboBox_s.SelectedIndex = 0;
+            tm1.ComboMSFill(comboBox_s);
+        }
+
+        // Timer 2
+        private void timer_start_2_Click(object sender, RoutedEventArgs e)
+        {
+            tm2.Start(comboBox_h2, comboBox_m2, comboBox_s2, timer_label_h2, timer_label_m2, timer_label_s2, timer_pause_2, T2_Elapsed);
+        }
+
+        private void T2_Elapsed(object sender, ElapsedEventArgs e)
+        {
+            tm2.Tick(timer_label_h2, timer_label_m2, timer_label_s2);
+        }
+
+        private void timer_pause_2_Click(object sender, RoutedEventArgs e)
+        {
+            tm2.Pause(timer_pause_2);
+        }
+        private void timer_pause_2_Loaded(object sender, RoutedEventArgs e)
+        {
+            timer_pause_2.IsEnabled = false;
+        }
+
+        private void timer_reset_2_Click(object sender, RoutedEventArgs e)
+        {
+            tm2.Reset(comboBox_h2, comboBox_m2, comboBox_s2, timer_label_h2, timer_label_m2, timer_label_s2, timer_pause_2, T2_Elapsed);
+        }
+
+        private void comboBox_h2_Loaded(object sender, RoutedEventArgs e)
+        {
+            tm2.ComboHFill(comboBox_h2);
+        }
+
+        private void comboBox_m2_Loaded(object sender, RoutedEventArgs e)
+        {
+            tm2.ComboMSFill(comboBox_m2);
+        }
+
+        private void comboBox_s2_Loaded(object sender, RoutedEventArgs e)
+        {
+            tm2.ComboMSFill(comboBox_s2);
+        }
+
+        // Timer 3
+        private void timer_start_3_Click(object sender, RoutedEventArgs e)
+        {
+            tm3.Start(comboBox_h3, comboBox_m3, comboBox_s3, timer_label_h3, timer_label_m3, timer_label_s3, timer_pause_3, T3_Elapsed);
+        }
+
+        private void T3_Elapsed(object sender, ElapsedEventArgs e)
+        {
+            tm3.Tick(timer_label_h3, timer_label_m3, timer_label_s3);
+        }
+
+        private void timer_pause_3_Click(object sender, RoutedEventArgs e)
+        {
+            tm3.Pause(timer_pause_3);
+        }
+        private void timer_pause_3_Loaded(object sender, RoutedEventArgs e)
+        {
+            timer_pause_3.IsEnabled = false;
+        }
+
+        private void timer_reset_3_Click(object sender, RoutedEventArgs e)
+        {
+            tm3.Reset(comboBox_h3, comboBox_m3, comboBox_s3, timer_label_h3, timer_label_m3, timer_label_s3, timer_pause_3, T3_Elapsed);
+        }
+
+        private void comboBox_h3_Loaded(object sender, RoutedEventArgs e)
+        {
+            tm3.ComboHFill(comboBox_h3);
+        }
+
+        private void comboBox_m3_Loaded(object sender, RoutedEventArgs e)
+        {
+            tm3.ComboMSFill(comboBox_m3);
+        }
+
+        private void comboBox_s3_Loaded(object sender, RoutedEventArgs e)
+        {
+            tm3.ComboMSFill(comboBox_s3);
         }
     }
 }
