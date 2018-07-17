@@ -1,0 +1,42 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="simple_timer" GeneratedClassName="MySettings">
+  <Profiles />
+  <Settings>
+    <Setting Name="cb_h" Type="System.String" Scope="User">
+      <Value Profile="(Default)">0</Value>
+    </Setting>
+    <Setting Name="cb_m" Type="System.String" Scope="User">
+      <Value Profile="(Default)">0</Value>
+    </Setting>
+    <Setting Name="cb_s" Type="System.String" Scope="User">
+      <Value Profile="(Default)">0</Value>
+    </Setting>
+    <Setting Name="cb_h2" Type="System.String" Scope="User">
+      <Value Profile="(Default)">0</Value>
+    </Setting>
+    <Setting Name="cb_m2" Type="System.String" Scope="User">
+      <Value Profile="(Default)">0</Value>
+    </Setting>
+    <Setting Name="cb_s2" Type="System.String" Scope="User">
+      <Value Profile="(Default)">0</Value>
+    </Setting>
+    <Setting Name="cb_h3" Type="System.String" Scope="User">
+      <Value Profile="(Default)">0</Value>
+    </Setting>
+    <Setting Name="cb_m3" Type="System.String" Scope="User">
+      <Value Profile="(Default)">0</Value>
+    </Setting>
+    <Setting Name="cb_s3" Type="System.String" Scope="User">
+      <Value Profile="(Default)">0</Value>
+    </Setting>
+    <Setting Name="tb" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Timer 1 name</Value>
+    </Setting>
+    <Setting Name="tb2" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Timer 2 name</Value>
+    </Setting>
+    <Setting Name="tb3" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Timer 3 name</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

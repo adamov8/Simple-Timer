@@ -1,7 +1,6 @@
 D:\Edm\Dokumentumok\Visual Studio 2015\simple_timer\simple_timer\bin\Debug\simple_timer.exe.config
 D:\Edm\Dokumentumok\Visual Studio 2015\simple_timer\simple_timer\bin\Debug\simple_timer.exe
 D:\Edm\Dokumentumok\Visual Studio 2015\simple_timer\simple_timer\bin\Debug\simple_timer.pdb
-D:\Edm\Dokumentumok\Visual Studio 2015\simple_timer\simple_timer\obj\Debug\simple_timer.csprojResolveAssemblyReference.cache
 D:\Edm\Dokumentumok\Visual Studio 2015\simple_timer\simple_timer\obj\Debug\MainWindow.g.cs
 D:\Edm\Dokumentumok\Visual Studio 2015\simple_timer\simple_timer\obj\Debug\App.g.cs
 D:\Edm\Dokumentumok\Visual Studio 2015\simple_timer\simple_timer\obj\Debug\simple_timer_MarkupCompile.cache
@@ -12,3 +11,4 @@ D:\Edm\Dokumentumok\Visual Studio 2015\simple_timer\simple_timer\obj\Debug\simpl
 D:\Edm\Dokumentumok\Visual Studio 2015\simple_timer\simple_timer\obj\Debug\simple_timer.csproj.GenerateResource.Cache
 D:\Edm\Dokumentumok\Visual Studio 2015\simple_timer\simple_timer\obj\Debug\simple_timer.exe
 D:\Edm\Dokumentumok\Visual Studio 2015\simple_timer\simple_timer\obj\Debug\simple_timer.pdb
+D:\Edm\Dokumentumok\Visual Studio 2015\simple_timer\simple_timer\obj\Debug\simple_timer.csprojResolveAssemblyReference.cache

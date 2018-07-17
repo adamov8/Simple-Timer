@@ -14,6 +14,7 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.Timers;
 using System.Windows.Threading;
+using simple_timer.Properties;
 
 namespace simple_timer
 {
@@ -56,16 +57,19 @@ namespace simple_timer
         private void comboBox_h_Loaded(object sender, RoutedEventArgs e)
         {
             tm1.ComboHFill(comboBox_h);
+            comboBox_h.Text = MySettings.Default.cb_h;
         }
 
         private void comboBox_m_Loaded(object sender, RoutedEventArgs e)
         {
             tm1.ComboMSFill(comboBox_m);
+            comboBox_m.Text = MySettings.Default.cb_m;
         }
 
         private void comboBox_s_Loaded(object sender, RoutedEventArgs e)
         {
             tm1.ComboMSFill(comboBox_s);
+            comboBox_s.Text= MySettings.Default.cb_s;
         }
 
         // Timer 2
@@ -96,16 +100,19 @@ namespace simple_timer
         private void comboBox_h2_Loaded(object sender, RoutedEventArgs e)
         {
             tm2.ComboHFill(comboBox_h2);
+            comboBox_h2.Text = MySettings.Default.cb_h2;
         }
 
         private void comboBox_m2_Loaded(object sender, RoutedEventArgs e)
         {
             tm2.ComboMSFill(comboBox_m2);
+            comboBox_m2.Text = MySettings.Default.cb_m2;
         }
 
         private void comboBox_s2_Loaded(object sender, RoutedEventArgs e)
         {
             tm2.ComboMSFill(comboBox_s2);
+            comboBox_s2.Text = MySettings.Default.cb_s2;
         }
 
         // Timer 3
@@ -136,16 +143,55 @@ namespace simple_timer
         private void comboBox_h3_Loaded(object sender, RoutedEventArgs e)
         {
             tm3.ComboHFill(comboBox_h3);
+            comboBox_h3.Text = MySettings.Default.cb_h3;
         }
 
         private void comboBox_m3_Loaded(object sender, RoutedEventArgs e)
         {
             tm3.ComboMSFill(comboBox_m3);
+            comboBox_m3.Text = MySettings.Default.cb_m3;
         }
 
         private void comboBox_s3_Loaded(object sender, RoutedEventArgs e)
         {
             tm3.ComboMSFill(comboBox_s3);
+            comboBox_s3.Text = MySettings.Default.cb_s3;
+        }
+
+        private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+            MySettings.Default.cb_h = comboBox_h.Text;
+            MySettings.Default.cb_m = comboBox_m.Text;
+            MySettings.Default.cb_s = comboBox_s.Text;
+
+            MySettings.Default.cb_h2 = comboBox_h2.Text;
+            MySettings.Default.cb_m2 = comboBox_m2.Text;
+            MySettings.Default.cb_s2 = comboBox_s2.Text;
+
+            MySettings.Default.cb_h3 = comboBox_h3.Text;
+            MySettings.Default.cb_m3 = comboBox_m3.Text;
+            MySettings.Default.cb_s3 = comboBox_s3.Text;
+
+            MySettings.Default.tb = tb.Text;
+            MySettings.Default.tb2 = tb2.Text;
+            MySettings.Default.tb3 = tb3.Text;
+
+            MySettings.Default.Save();
+        }
+
+        private void tb1_Loaded(object sender, RoutedEventArgs e)
+        {
+            tb.Text = MySettings.Default.tb;
+        }
+
+        private void tb2_Loaded(object sender, RoutedEventArgs e)
+        {
+            tb2.Text = MySettings.Default.tb2;
+        }
+
+        private void tb3_Loaded(object sender, RoutedEventArgs e)
+        {
+            tb3.Text = MySettings.Default.tb3;
         }
     }
 }
