@@ -1,10 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Timers;
 using System.Windows.Controls;
+using System.Media;
 
 namespace simple_timer
 {
@@ -13,7 +10,7 @@ namespace simple_timer
         public int iv;
         public Timer timer = new Timer(1000);
 
-        public void Start(ComboBox x, ComboBox y, ComboBox z, Label a, Label b, Label c, Button p, ElapsedEventHandler e)
+        public void Start(ComboBox x, ComboBox y, ComboBox z, Label a, Label b, Label c, Button p, ElapsedEventHandler e, TextBlock s)
         {
 
             iv = int.Parse(x.Text) * 3600 + int.Parse(y.Text) * 60 + int.Parse(z.Text);
@@ -26,13 +23,15 @@ namespace simple_timer
             c.Content = (iv % 3600) % 60;
             timer.Start();
 
+            s.Text = "";
+
             if (iv > 0)
             {
                 p.IsEnabled = true;
                 p.Content = "Stop";
             }
         }
-        public void Tick(Label a, Label b, Label c)
+        public void Tick(Label a, Label b, Label c, Button p, TextBlock s)
         {
             if (iv > 0)
             {
@@ -43,7 +42,28 @@ namespace simple_timer
                 a.Content = iv / 3600;
                 b.Content = (iv % 3600) / 60;
                 c.Content = (iv % 3600) % 60;
+                if (iv == 0)
+                {
+                    p.Content = "Stop";
+                    p.IsEnabled = false;
+
+                    timer.Stop();
+                    s.Text = "Time's up!";
+
+                    // New Thread for notification sound, initiate playback
+                    System.Threading.Thread sound = new System.Threading.Thread(() => this.NotificationSound());
+                    sound.Start();          
+                }
             });
+            
+        }
+        public void NotificationSound()
+        {
+            for (int i = 0; i < 3; i++)
+            {
+                SystemSounds.Exclamation.Play();
+                System.Threading.Thread.Sleep(1000);
+            }
         }
         public void Pause(Button p)
         {
@@ -58,17 +78,21 @@ namespace simple_timer
                 p.Content = "Stop";
             }
         }
-        public void Reset(ComboBox x, ComboBox y, ComboBox z, Label a, Label b, Label c, Button p, ElapsedEventHandler e)
+        public void Reset(ComboBox x, ComboBox y, ComboBox z, Label a, Label b, Label c, Button p, ElapsedEventHandler e, TextBlock s)
         {
             timer.Elapsed -= e;
             timer.Stop();
+
             a.Content = 0;
             b.Content = 0;
             c.Content = 0;
 
-            x.SelectedIndex = 0;
-            y.SelectedIndex = 0;
-            z.SelectedIndex = 0;
+            s.Text = "";
+
+            //// Resetting ComboBoxes (where you set the actual timer)
+            //x.SelectedIndex = 0;
+            //y.SelectedIndex = 0;
+            //z.SelectedIndex = 0;
 
             p.IsEnabled = false;
         }

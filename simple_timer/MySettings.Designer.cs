@@ -166,5 +166,29 @@ namespace simple_timer {
                 this["tb3"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("200")]
+        public double WindowPositionTop {
+            get {
+                return ((double)(this["WindowPositionTop"]));
+            }
+            set {
+                this["WindowPositionTop"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("200")]
+        public double WindowPositionLeft {
+            get {
+                return ((double)(this["WindowPositionLeft"]));
+            }
+            set {
+                this["WindowPositionLeft"] = value;
+            }
+        }
     }
 }

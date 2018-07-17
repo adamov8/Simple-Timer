@@ -38,5 +38,11 @@
     <Setting Name="tb3" Type="System.String" Scope="User">
       <Value Profile="(Default)">Timer 3 name</Value>
     </Setting>
+    <Setting Name="WindowPositionTop" Type="System.Double" Scope="User">
+      <Value Profile="(Default)">200</Value>
+    </Setting>
+    <Setting Name="WindowPositionLeft" Type="System.Double" Scope="User">
+      <Value Profile="(Default)">200</Value>
+    </Setting>
   </Settings>
 </SettingsFile>

@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:simple_timer"
         mc:Ignorable="d"
-        Title="Simple Timer" Height="350" Width="400" MaxHeight="350" MaxWidth="400" MinHeight="350" MinWidth="400" Background="Gray" Icon="Timer_16x.png" Closing="Window_Closing">
+        Title="Simple Timer" Height="350" Width="400" MaxHeight="350" MaxWidth="400" MinHeight="350" MinWidth="400" Background="Gray" Icon="Timer_16x.png" Closing="Window_Closing" Initialized="Window_Initialized">
     <Grid Background="Black">
         <!--Timer 1-->
         <Button x:Name="timer_start_1" Content="(Re)Start" HorizontalAlignment="Left" Margin="6,35,0,0" VerticalAlignment="Top" Width="75" Click="timer_start_1_Click" Foreground="White" Background="Black" BorderBrush="#FF707070"/>
@@ -38,7 +38,7 @@
         <Label x:Name="h2" Content="Hour" HorizontalAlignment="Left" Margin="108,139,0,0" VerticalAlignment="Top" Foreground="White" FontSize="10"/>
         <Label x:Name="m2" Content="Min" HorizontalAlignment="Left" Margin="164,139,0,0" VerticalAlignment="Top" Foreground="White" FontSize="10"/>
         <Label x:Name="s2" Content="Sec" HorizontalAlignment="Left" Margin="218,139,0,0" VerticalAlignment="Top" Foreground="White" FontSize="10"/>
-        
+
         <!--Timer 3-->
         <Button x:Name="timer_start_3" Content="(Re)Start" HorizontalAlignment="Left" Margin="6,251,0,0" VerticalAlignment="Top" Width="75" Click="timer_start_3_Click" Foreground="White" Background="Black" BorderBrush="#FF707070"/>
         <Button x:Name="timer_pause_3" Content="Stop" HorizontalAlignment="Left" Margin="6,284,0,0" VerticalAlignment="Top" Width="75" Click="timer_pause_3_Click" Loaded="timer_pause_3_Loaded" Foreground="White" Background="Black" BorderBrush="#FF707070"/>
@@ -54,7 +54,7 @@
         <Label x:Name="h3" Content="Hour" HorizontalAlignment="Left" Margin="108,244,0,0" VerticalAlignment="Top" Foreground="White" FontSize="10"/>
         <Label x:Name="m3" Content="Min" HorizontalAlignment="Left" Margin="164,244,0,0" VerticalAlignment="Top" Foreground="White" FontSize="10"/>
         <Label x:Name="s3" Content="Sec" HorizontalAlignment="Left" Margin="218,244,0,0" VerticalAlignment="Top" Foreground="White" FontSize="10"/>
-        
+
         <!--Timer names-->
         <TextBox x:Name="tb" HorizontalAlignment="Left" Height="23" Margin="272,60,0,0" TextWrapping="Wrap" Text="Timer 1 name" VerticalAlignment="Top" Width="101" Foreground="White" Background="Black" FontWeight="Bold" TextAlignment="Center" Loaded="tb1_Loaded">
             <TextBox.BorderBrush>
@@ -80,5 +80,8 @@
                 </LinearGradientBrush>
             </TextBox.BorderBrush>
         </TextBox>
+        <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Margin="30,6,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Foreground="#FFFFAD7E" Width="75" FontWeight="Bold" />
+        <TextBlock x:Name="textBlock_2" HorizontalAlignment="Left" Margin="30,118,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Foreground="#FFFFAD7E" Width="75" FontWeight="Bold"/>
+        <TextBlock x:Name="textBlock_3" HorizontalAlignment="Left" Margin="30,222,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Foreground="#FFFFAD7E" Width="75" FontWeight="Bold"/>
     </Grid>
 </Window>
