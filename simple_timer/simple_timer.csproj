@@ -40,6 +40,8 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Core" />
@@ -63,6 +65,9 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
       <DependentUpon>MySettings.settings</DependentUpon>
     </Compile>
+    <Compile Include="NotifSelector.xaml.cs">
+      <DependentUpon>NotifSelector.xaml</DependentUpon>
+    </Compile>
     <Compile Include="TimerLogic.cs" />
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
@@ -76,6 +81,10 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="NotifSelector.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs">
@@ -109,10 +118,14 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Timer_16x.png" />
+    <EmbeddedResource Include="Timer_16x.ico" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Timer_16x.ico" />
+    <None Include="Resources\run_ring_fade.wav" />
+    <None Include="run_ring_fade.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="SoundFile_16x_32.bmp" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

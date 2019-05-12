@@ -190,5 +190,65 @@ namespace simple_timer {
                 this["WindowPositionLeft"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("200")]
+        public double NotifWindowPositionTop {
+            get {
+                return ((double)(this["NotifWindowPositionTop"]));
+            }
+            set {
+                this["NotifWindowPositionTop"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("200")]
+        public double NotifWindowPositionLeft {
+            get {
+                return ((double)(this["NotifWindowPositionLeft"]));
+            }
+            set {
+                this["NotifWindowPositionLeft"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string filepath_1 {
+            get {
+                return ((string)(this["filepath_1"]));
+            }
+            set {
+                this["filepath_1"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string filepath_2 {
+            get {
+                return ((string)(this["filepath_2"]));
+            }
+            set {
+                this["filepath_2"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string filepath_3 {
+            get {
+                return ((string)(this["filepath_3"]));
+            }
+            set {
+                this["filepath_3"] = value;
+            }
+        }
     }
 }

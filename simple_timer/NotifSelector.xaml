@@ -1,0 +1,20 @@
+﻿<Window x:Class="simple_timer.NotifSelector"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:simple_timer"
+        mc:Ignorable="d"
+        Title="Select notification sound" Height="134.759" Width="298.396" Initialized="Window_Initialized" Loaded="Window_Loaded" IsVisibleChanged="Window_IsVisibleChanged">
+    <Grid HorizontalAlignment="Left" VerticalAlignment="Top" Height="113"  Width="298" MaxHeight="104"  MaxWidth="290" MinHeight="104"  MinWidth="290" Background="Black" Margin="0,0,-8,-9">
+        <TextBox x:Name="tb_notifPath" HorizontalAlignment="Left" Margin="75,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="199" Height="42" Foreground="White" Background="Black" FontStyle="Italic" />
+        <Button Style="{StaticResource MyButton}" x:Name="b_notifConfirm" Content="Confirm" HorizontalAlignment="Left" Margin="6,66,0,0" VerticalAlignment="Top" Width="60" Foreground="White" BorderBrush="#FF707070" Height="25" Click="b_notifConfirm_Click"/>
+        <Button Style="{StaticResource MyButton}" x:Name="b_notifCancel" Content="Cancel" HorizontalAlignment="Left" Margin="6,38,0,0" VerticalAlignment="Top" Width="60" Foreground="White" BorderBrush="#FF707070" Height="25" Click="b_notifCancel_Click"/>
+        <Label x:Name="l_fpath" Content="File path:" Foreground="White" HorizontalAlignment="Left" VerticalAlignment="Top" Height="26" Width="60" Margin="10,4,0,0"/>
+        <TextBlock x:Name="tb_usage" 
+                   Text="Use .wav extension files only! 
+                   Song will time out after 30 seconds." 
+                   TextWrapping="WrapWithOverflow" Foreground="White" HorizontalAlignment="Left" Margin="105,60,0,0" VerticalAlignment="Top" Width="173" FontSize="11" FontStyle="Italic" Height="51">
+        </TextBlock>
+    </Grid>
+</Window>

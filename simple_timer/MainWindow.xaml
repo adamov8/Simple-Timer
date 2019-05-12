@@ -5,83 +5,101 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:simple_timer"
         mc:Ignorable="d"
-        Title="Simple Timer" Height="350" Width="400" MaxHeight="350" MaxWidth="400" MinHeight="350" MinWidth="400" Background="Gray" Icon="Timer_16x.png" Closing="Window_Closing" Initialized="Window_Initialized">
+        Title="Simple Timer" Height="350" Width="400" MaxHeight="350" MaxWidth="400" MinHeight="350" MinWidth="400" Background="Gray" Closing="Window_Closing" Initialized="Window_Initialized">
     <Grid Background="Black">
         <!--Timer 1-->
-        <Button x:Name="timer_start_1" Content="(Re)Start" HorizontalAlignment="Left" Margin="6,35,0,0" VerticalAlignment="Top" Width="75" Click="timer_start_1_Click" Foreground="White" Background="Black" BorderBrush="#FF707070"/>
-        <Button x:Name="timer_pause_1" Content="Stop" HorizontalAlignment="Left" Margin="6,68,0,0" VerticalAlignment="Top" Width="75" Click="timer_pause_1_Click" Loaded="timer_pause_1_Loaded" Foreground="White" Background="Black" BorderBrush="#FF707070"/>
-        <Button x:Name="timer_reset_1" Content="Reset" HorizontalAlignment="Left" Margin="298,9,0,0" VerticalAlignment="Top" Width="75" Click="timer_reset_1_Click" Foreground="White" Background="Black" BorderBrush="#FF707070"/>
-        <Label x:Name="timer_label_h"  HorizontalAlignment="Left" Margin="113,50,0,0" VerticalAlignment="Top" Height="38" Width="48" Content="0" FontWeight="Bold" FontSize="20" Foreground="White"/>
-        <Label x:Name="timer_label_m"  HorizontalAlignment="Left" Margin="166,50,0,0" VerticalAlignment="Top" Height="38" Width="48" Content="0" FontWeight="Bold" FontSize="20" Foreground="White"/>
-        <Label x:Name="timer_label_s"  HorizontalAlignment="Left" Margin="219,50,0,0" VerticalAlignment="Top" Height="38" Width="48" Content="0" FontSize="20" FontWeight="Bold" Foreground="White"/>
-        <ComboBox x:Name="comboBox_h" HorizontalAlignment="Left" Margin="105,6,0,0" VerticalAlignment="Top" Width="48" SelectedIndex="0" MaxDropDownHeight="200" Loaded="comboBox_h_Loaded" />
-        <ComboBox x:Name="comboBox_m" HorizontalAlignment="Left" Margin="158,6,0,0" VerticalAlignment="Top" Width="48" SelectedIndex="0" MaxDropDownHeight="200" Loaded="comboBox_m_Loaded" />
-        <ComboBox x:Name="comboBox_s" HorizontalAlignment="Left" Margin="211,6,0,0" VerticalAlignment="Top" Width="48" SelectedIndex="0" MaxDropDownHeight="200" Loaded="comboBox_s_Loaded" />
-        <Label x:Name="sep11" Content=":" HorizontalAlignment="Left" Margin="148,50,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="18" Width="18" Foreground="White"/>
-        <Label x:Name="sep12" Content=":" HorizontalAlignment="Left" Margin="196,50,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="18" Width="18" Foreground="White"/>
-        <Label x:Name="h1" Content="Hour" HorizontalAlignment="Left" Margin="108,27,0,0" VerticalAlignment="Top" Foreground="White" FontSize="10"/>
-        <Label x:Name="m1" Content="Min" HorizontalAlignment="Left" Margin="164,27,0,0" VerticalAlignment="Top" Foreground="White" FontSize="10"/>
-        <Label x:Name="s1" Content="Sec" HorizontalAlignment="Left" Margin="218,28,0,0" VerticalAlignment="Top" Foreground="White" FontSize="10"/>
+        <Label x:Name="label_t1" Content="T1" Foreground="White" HorizontalAlignment="Left" Margin="2,3,0,0" Width="24" FontWeight="Bold" Height="23" VerticalAlignment="Top"/>
+        <Button Style="{StaticResource MyButton}" x:Name="timer_start_1" Content="Start" HorizontalAlignment="Left" Margin="6,36,0,0" VerticalAlignment="Top" Width="75" Click="timer_start_1_Click" Foreground="White" Background="Black" BorderBrush="#FF707070" MouseDoubleClick="timer_start_1_MouseDoubleClick"/>
+        <Button Style="{StaticResource MyButton}" x:Name="timer_pause_1" Content="Stop" HorizontalAlignment="Left" Margin="6,67,0,0" VerticalAlignment="Top" Width="75" Click="timer_pause_1_Click" Loaded="timer_pause_1_Loaded" Foreground="White" Background="Black" BorderBrush="#FF707070"/>
+        <Button Style="{StaticResource MyButton}" x:Name="timer_reset_1" Content="Reset" HorizontalAlignment="Left" Margin="303,13,0,0" VerticalAlignment="Top" Width="75" Click="timer_reset_1_Click" Foreground="White" Background="Black" BorderBrush="#FF707070"/>
+        <Label x:Name="timer_label_h"  HorizontalAlignment="Left" Margin="112,54,0,0" VerticalAlignment="Top" Height="38" Width="48" Content="0" FontWeight="Bold" FontSize="20" Foreground="White"/>
+        <Label x:Name="timer_label_m"  HorizontalAlignment="Left" Margin="165,54,0,0" VerticalAlignment="Top" Height="38" Width="48" Content="0" FontWeight="Bold" FontSize="20" Foreground="White"/>
+        <Label x:Name="timer_label_s"  HorizontalAlignment="Left" Margin="218,54,0,0" VerticalAlignment="Top" Height="38" Width="48" Content="0" FontSize="20" FontWeight="Bold" Foreground="White"/>
+        <ComboBox x:Name="comboBox_h" HorizontalAlignment="Left" Margin="104,10,0,0" VerticalAlignment="Top" Width="48" SelectedIndex="0" MaxDropDownHeight="200" Loaded="comboBox_h_Loaded" />
+        <ComboBox x:Name="comboBox_m" HorizontalAlignment="Left" Margin="157,10,0,0" VerticalAlignment="Top" Width="48" SelectedIndex="0" MaxDropDownHeight="200" Loaded="comboBox_m_Loaded" />
+        <ComboBox x:Name="comboBox_s" HorizontalAlignment="Left" Margin="210,10,0,0" VerticalAlignment="Top" Width="48" SelectedIndex="0" MaxDropDownHeight="200" />
+        <Label x:Name="sep11" Content=":" HorizontalAlignment="Left" Margin="147,54,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="18" Width="18" Foreground="White"/>
+        <Label x:Name="sep12" Content=":" HorizontalAlignment="Left" Margin="195,54,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="18" Width="18" Foreground="White"/>
+        <Label x:Name="h1" Content="Hour" HorizontalAlignment="Left" Margin="107,31,0,0" VerticalAlignment="Top" Foreground="White" FontSize="10"/>
+        <Label x:Name="m1" Content="Min" HorizontalAlignment="Left" Margin="163,31,0,0" VerticalAlignment="Top" Foreground="White" FontSize="10"/>
+        <Label x:Name="s1" Content="Sec" HorizontalAlignment="Left" Margin="217,31,0,0" VerticalAlignment="Top" Foreground="White" FontSize="10"/>
+        <Button Style="{StaticResource MyButton}" x:Name="b_notif_1" ToolTip="Load notification sound from file" HorizontalAlignment="Left" Height="16" Margin="271,16,0,0" VerticalAlignment="Top" Width="16" Click="b_notif_1_Click">
+            <Button.Background>
+                <ImageBrush ImageSource="SoundFile_16x_32.bmp"></ImageBrush>
+            </Button.Background>
+        </Button>
 
         <!--Timer 2-->
-        <Button x:Name="timer_start_2" Content="(Re)Start" HorizontalAlignment="Left" Margin="6,147,0,0" VerticalAlignment="Top" Width="75" Click="timer_start_2_Click" Foreground="White" Background="Black" BorderBrush="#FF707070"/>
-        <Button x:Name="timer_pause_2" Content="Stop" HorizontalAlignment="Left" Margin="6,180,0,0" VerticalAlignment="Top" Width="75" Click="timer_pause_2_Click" Loaded="timer_pause_2_Loaded" Foreground="White" Background="Black" BorderBrush="#FF707070"/>
-        <Button x:Name="timer_reset_2" Content="Reset" HorizontalAlignment="Left" Margin="298,121,0,0" VerticalAlignment="Top" Width="75" Click="timer_reset_2_Click" Foreground="White" Background="Black" BorderBrush="#FF707070"/>
-        <Label x:Name="timer_label_h2"  HorizontalAlignment="Left" Margin="113,162,0,0" VerticalAlignment="Top" Height="38" Width="48" Content="0" FontWeight="Bold" FontSize="20" Foreground="White"/>
-        <Label x:Name="timer_label_m2"  HorizontalAlignment="Left" Margin="166,162,0,0" VerticalAlignment="Top" Height="38" Width="48" Content="0" FontWeight="Bold" FontSize="20" Foreground="White"/>
-        <Label x:Name="timer_label_s2"  HorizontalAlignment="Left" Margin="219,162,0,0" VerticalAlignment="Top" Height="38" Width="48" Content="0" FontSize="20" FontWeight="Bold" Foreground="White"/>
-        <ComboBox x:Name="comboBox_h2" HorizontalAlignment="Left" Margin="105,118,0,0" VerticalAlignment="Top" Width="48" SelectedIndex="0" MaxDropDownHeight="200" Loaded="comboBox_h2_Loaded" />
-        <ComboBox x:Name="comboBox_m2" HorizontalAlignment="Left" Margin="158,118,0,0" VerticalAlignment="Top" Width="48" SelectedIndex="0" MaxDropDownHeight="200" Loaded="comboBox_m2_Loaded" />
-        <ComboBox x:Name="comboBox_s2" HorizontalAlignment="Left" Margin="211,118,0,0" VerticalAlignment="Top" Width="48" SelectedIndex="0" MaxDropDownHeight="200" Loaded="comboBox_s2_Loaded" />
-        <Label x:Name="sep21" Content=":" HorizontalAlignment="Left" Margin="148,162,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="18" Width="18" Foreground="White"/>
-        <Label x:Name="sep22" Content=":" HorizontalAlignment="Left" Margin="196,162,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="18" Width="18" Foreground="White"/>
-        <Label x:Name="h2" Content="Hour" HorizontalAlignment="Left" Margin="108,139,0,0" VerticalAlignment="Top" Foreground="White" FontSize="10"/>
-        <Label x:Name="m2" Content="Min" HorizontalAlignment="Left" Margin="164,139,0,0" VerticalAlignment="Top" Foreground="White" FontSize="10"/>
-        <Label x:Name="s2" Content="Sec" HorizontalAlignment="Left" Margin="218,139,0,0" VerticalAlignment="Top" Foreground="White" FontSize="10"/>
+        <Label x:Name="label_t2" Content="T2" Foreground="White" HorizontalAlignment="Left" Margin="2,109,0,0" Width="24" FontWeight="Bold" Height="23" VerticalAlignment="Top"/>
+        <Button Style="{StaticResource MyButton}" x:Name="timer_start_2" Content="Start" HorizontalAlignment="Left" Margin="6,142,0,0" VerticalAlignment="Top" Width="75" Click="timer_start_2_Click" Foreground="White" Background="Black" BorderBrush="#FF707070" MouseDoubleClick="timer_start_2_MouseDoubleClick"/>
+        <Button Style="{StaticResource MyButton}" x:Name="timer_pause_2" Content="Stop" HorizontalAlignment="Left" Margin="6,173,0,0" VerticalAlignment="Top" Width="75" Click="timer_pause_2_Click" Loaded="timer_pause_2_Loaded" Foreground="White" Background="Black" BorderBrush="#FF707070"/>
+        <Button Style="{StaticResource MyButton}" x:Name="timer_reset_2" Content="Reset" HorizontalAlignment="Left" Margin="303,119,0,0" VerticalAlignment="Top" Width="75" Click="timer_reset_2_Click" Foreground="White" Background="Black" BorderBrush="#FF707070"/>
+        <Label x:Name="timer_label_h2"  HorizontalAlignment="Left" Margin="112,160,0,0" VerticalAlignment="Top" Height="38" Width="48" Content="0" FontWeight="Bold" FontSize="20" Foreground="White"/>
+        <Label x:Name="timer_label_m2"  HorizontalAlignment="Left" Margin="165,160,0,0" VerticalAlignment="Top" Height="38" Width="48" Content="0" FontWeight="Bold" FontSize="20" Foreground="White"/>
+        <Label x:Name="timer_label_s2"  HorizontalAlignment="Left" Margin="218,160,0,0" VerticalAlignment="Top" Height="38" Width="48" Content="0" FontSize="20" FontWeight="Bold" Foreground="White"/>
+        <ComboBox x:Name="comboBox_h2" HorizontalAlignment="Left" Margin="104,116,0,0" VerticalAlignment="Top" Width="48" SelectedIndex="0" MaxDropDownHeight="200" />
+        <ComboBox x:Name="comboBox_m2" HorizontalAlignment="Left" Margin="157,116,0,0" VerticalAlignment="Top" Width="48" SelectedIndex="0" MaxDropDownHeight="200" />
+        <ComboBox x:Name="comboBox_s2" HorizontalAlignment="Left" Margin="210,116,0,0" VerticalAlignment="Top" Width="48" SelectedIndex="0" MaxDropDownHeight="200" />
+        <Label x:Name="sep21" Content=":" HorizontalAlignment="Left" Margin="147,160,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="18" Width="18" Foreground="White"/>
+        <Label x:Name="sep22" Content=":" HorizontalAlignment="Left" Margin="195,160,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="18" Width="18" Foreground="White"/>
+        <Label x:Name="h2" Content="Hour" HorizontalAlignment="Left" Margin="107,137,0,0" VerticalAlignment="Top" Foreground="White" FontSize="10"/>
+        <Label x:Name="m2" Content="Min" HorizontalAlignment="Left" Margin="163,137,0,0" VerticalAlignment="Top" Foreground="White" FontSize="10"/>
+        <Label x:Name="s2" Content="Sec" HorizontalAlignment="Left" Margin="217,137,0,0" VerticalAlignment="Top" Foreground="White" FontSize="10"/>
+        <Button Style="{StaticResource MyButton}" x:Name="b_notif_2" ToolTip="Load notification sound from file" HorizontalAlignment="Left" Height="16" Margin="271,122,0,0" VerticalAlignment="Top" Width="16" Click="b_notif_2_Click">
+            <Button.Background>
+                <ImageBrush ImageSource="SoundFile_16x_32.bmp"></ImageBrush>
+            </Button.Background>
+        </Button>
 
         <!--Timer 3-->
-        <Button x:Name="timer_start_3" Content="(Re)Start" HorizontalAlignment="Left" Margin="6,251,0,0" VerticalAlignment="Top" Width="75" Click="timer_start_3_Click" Foreground="White" Background="Black" BorderBrush="#FF707070"/>
-        <Button x:Name="timer_pause_3" Content="Stop" HorizontalAlignment="Left" Margin="6,284,0,0" VerticalAlignment="Top" Width="75" Click="timer_pause_3_Click" Loaded="timer_pause_3_Loaded" Foreground="White" Background="Black" BorderBrush="#FF707070"/>
-        <Button x:Name="timer_reset_3" Content="Reset" HorizontalAlignment="Left" Margin="298,225,0,0" VerticalAlignment="Top" Width="75" Click="timer_reset_3_Click" Foreground="White" Background="Black" BorderBrush="#FF707070"/>
-        <Label x:Name="timer_label_h3"  HorizontalAlignment="Left" Margin="113,266,0,0" VerticalAlignment="Top" Height="38" Width="48" Content="0" FontWeight="Bold" FontSize="20" Foreground="White"/>
-        <Label x:Name="timer_label_m3"  HorizontalAlignment="Left" Margin="166,266,0,0" VerticalAlignment="Top" Height="38" Width="48" Content="0" FontWeight="Bold" FontSize="20" Foreground="White"/>
-        <Label x:Name="timer_label_s3"  HorizontalAlignment="Left" Margin="219,266,0,0" VerticalAlignment="Top" Height="38" Width="48" Content="0" FontSize="20" FontWeight="Bold" Foreground="White"/>
-        <ComboBox x:Name="comboBox_h3" HorizontalAlignment="Left" Margin="105,222,0,0" VerticalAlignment="Top" Width="48" SelectedIndex="0" MaxDropDownHeight="200" Loaded="comboBox_h3_Loaded" />
-        <ComboBox x:Name="comboBox_m3" HorizontalAlignment="Left" Margin="158,222,0,0" VerticalAlignment="Top" Width="48" SelectedIndex="0" MaxDropDownHeight="200" Loaded="comboBox_m3_Loaded" />
-        <ComboBox x:Name="comboBox_s3" HorizontalAlignment="Left" Margin="211,222,0,0" VerticalAlignment="Top" Width="48" SelectedIndex="0" MaxDropDownHeight="200" Loaded="comboBox_s3_Loaded" />
-        <Label x:Name="sep31" Content=":" HorizontalAlignment="Left" Margin="148,266,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="18" Width="18" Foreground="White"/>
-        <Label x:Name="sep32" Content=":" HorizontalAlignment="Left" Margin="196,266,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="18" Width="18" Foreground="White"/>
-        <Label x:Name="h3" Content="Hour" HorizontalAlignment="Left" Margin="108,244,0,0" VerticalAlignment="Top" Foreground="White" FontSize="10"/>
-        <Label x:Name="m3" Content="Min" HorizontalAlignment="Left" Margin="164,244,0,0" VerticalAlignment="Top" Foreground="White" FontSize="10"/>
-        <Label x:Name="s3" Content="Sec" HorizontalAlignment="Left" Margin="218,244,0,0" VerticalAlignment="Top" Foreground="White" FontSize="10"/>
+        <Label x:Name="label_t3" Content="T3" Foreground="White" HorizontalAlignment="Left" Margin="2,215,0,0" Width="24" FontWeight="Bold" Height="23" VerticalAlignment="Top"/>
+        <Button Style="{StaticResource MyButton}" x:Name="timer_start_3" Content="Start" HorizontalAlignment="Left" Margin="6,248,0,0" VerticalAlignment="Top" Width="75" Click="timer_start_3_Click" Foreground="White" Background="Black" BorderBrush="#FF707070" MouseDoubleClick="timer_start_3_MouseDoubleClick"/>
+        <Button Style="{StaticResource MyButton}" x:Name="timer_pause_3" Content="Stop" HorizontalAlignment="Left" Margin="6,279,0,0" VerticalAlignment="Top" Width="75" Click="timer_pause_3_Click" Loaded="timer_pause_3_Loaded" Foreground="White" Background="Black" BorderBrush="#FF707070"/>
+        <Button Style="{StaticResource MyButton}" x:Name="timer_reset_3" Content="Reset" HorizontalAlignment="Left" Margin="303,225,0,0" VerticalAlignment="Top" Width="75" Click="timer_reset_3_Click" Foreground="White" Background="Black" BorderBrush="#FF707070"/>
+        <Label x:Name="timer_label_h3"  HorizontalAlignment="Left" Margin="112,266,0,0" VerticalAlignment="Top" Height="38" Width="48" Content="0" FontWeight="Bold" FontSize="20" Foreground="White"/>
+        <Label x:Name="timer_label_m3"  HorizontalAlignment="Left" Margin="165,266,0,0" VerticalAlignment="Top" Height="38" Width="48" Content="0" FontWeight="Bold" FontSize="20" Foreground="White"/>
+        <Label x:Name="timer_label_s3"  HorizontalAlignment="Left" Margin="218,266,0,0" VerticalAlignment="Top" Height="38" Width="48" Content="0" FontSize="20" FontWeight="Bold" Foreground="White"/>
+        <ComboBox x:Name="comboBox_h3" HorizontalAlignment="Left" Margin="104,222,0,0" VerticalAlignment="Top" Width="48" SelectedIndex="0" MaxDropDownHeight="200" />
+        <ComboBox x:Name="comboBox_m3" HorizontalAlignment="Left" Margin="157,222,0,0" VerticalAlignment="Top" Width="48" SelectedIndex="0" MaxDropDownHeight="200" />
+        <ComboBox x:Name="comboBox_s3" HorizontalAlignment="Left" Margin="210,222,0,0" VerticalAlignment="Top" Width="48" SelectedIndex="0" MaxDropDownHeight="200" />
+        <Label x:Name="sep31" Content=":" HorizontalAlignment="Left" Margin="147,266,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="18" Width="18" Foreground="White"/>
+        <Label x:Name="sep32" Content=":" HorizontalAlignment="Left" Margin="195,266,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="18" Width="18" Foreground="White"/>
+        <Label x:Name="h3" Content="Hour" HorizontalAlignment="Left" Margin="107,244,0,0" VerticalAlignment="Top" Foreground="White" FontSize="10"/>
+        <Label x:Name="m3" Content="Min" HorizontalAlignment="Left" Margin="163,244,0,0" VerticalAlignment="Top" Foreground="White" FontSize="10"/>
+        <Label x:Name="s3" Content="Sec" HorizontalAlignment="Left" Margin="217,244,0,0" VerticalAlignment="Top" Foreground="White" FontSize="10"/>
+        <Button Style="{StaticResource MyButton}" x:Name="b_notif_3" ToolTip="Load notification sound from file" HorizontalAlignment="Left" Height="16" Margin="271,228,0,0" VerticalAlignment="Top" Width="16" Click="b_notif_3_Click">
+            <Button.Background>
+                <ImageBrush ImageSource="SoundFile_16x_32.bmp"></ImageBrush>
+            </Button.Background>
+        </Button>
 
         <!--Timer names-->
-        <TextBox x:Name="tb" HorizontalAlignment="Left" Height="23" Margin="272,60,0,0" TextWrapping="Wrap" Text="Timer 1 name" VerticalAlignment="Top" Width="101" Foreground="White" Background="Black" FontWeight="Bold" TextAlignment="Center" Loaded="tb1_Loaded">
+        <TextBox x:Name="tb" HorizontalAlignment="Left" Height="23" Margin="277,64,0,0" TextWrapping="Wrap" Text="Timer 1 name" VerticalAlignment="Top" Width="101" Foreground="White" Background="Black" FontWeight="Bold" TextAlignment="Center" Loaded="tb1_Loaded">
             <TextBox.BorderBrush>
-                <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
+                <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0.5">
                     <GradientStop Color="Black"/>
                     <GradientStop Color="White" Offset="1"/>
                 </LinearGradientBrush>
             </TextBox.BorderBrush>
         </TextBox>
-        <TextBox x:Name="tb2" HorizontalAlignment="Left" Height="23" Margin="272,172,0,0" TextWrapping="Wrap" Text="Timer 2 name" VerticalAlignment="Top" Width="101" Foreground="White" Background="Black" FontWeight="Bold" TextAlignment="Center" Loaded="tb2_Loaded">
+        <TextBox x:Name="tb2" HorizontalAlignment="Left" Height="23" Margin="277,170,0,0" TextWrapping="Wrap" Text="Timer 2 name" VerticalAlignment="Top" Width="101" Foreground="White" Background="Black" FontWeight="Bold" TextAlignment="Center" Loaded="tb2_Loaded">
             <TextBox.BorderBrush>
-                <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
+                <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0.5">
                     <GradientStop Color="Black"/>
                     <GradientStop Color="White" Offset="1"/>
                 </LinearGradientBrush>
             </TextBox.BorderBrush>
         </TextBox>
-        <TextBox x:Name="tb3" HorizontalAlignment="Left" Height="23" Margin="272,276,0,0" TextWrapping="Wrap" Text="Timer 3 name" VerticalAlignment="Top" Width="101" Foreground="White" Background="Black" FontWeight="Bold" TextAlignment="Center" Loaded="tb3_Loaded">
+        <TextBox x:Name="tb3" HorizontalAlignment="Left" Height="23" Margin="277,276,0,0" TextWrapping="Wrap" Text="Timer 3 name" VerticalAlignment="Top" Width="101" Foreground="White" Background="Black" FontWeight="Bold" TextAlignment="Center" Loaded="tb3_Loaded">
             <TextBox.BorderBrush>
-                <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
+                <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0.5">
                     <GradientStop Color="Black"/>
                     <GradientStop Color="White" Offset="1"/>
                 </LinearGradientBrush>
             </TextBox.BorderBrush>
         </TextBox>
-        <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Margin="30,6,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Foreground="#FFFFAD7E" Width="75" FontWeight="Bold" />
-        <TextBlock x:Name="textBlock_2" HorizontalAlignment="Left" Margin="30,118,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Foreground="#FFFFAD7E" Width="75" FontWeight="Bold"/>
-        <TextBlock x:Name="textBlock_3" HorizontalAlignment="Left" Margin="30,222,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Foreground="#FFFFAD7E" Width="75" FontWeight="Bold"/>
+        <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Margin="30,8,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Foreground="#FFFFAD7E" Width="75" FontWeight="Bold" />
+        <TextBlock x:Name="textBlock_2" HorizontalAlignment="Left" Margin="30,114,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Foreground="#FFFFAD7E" Width="75" FontWeight="Bold"/>
+        <TextBlock x:Name="textBlock_3" HorizontalAlignment="Left" Margin="30,220,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Foreground="#FFFFAD7E" Width="75" FontWeight="Bold"/>
     </Grid>
 </Window>

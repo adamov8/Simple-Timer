@@ -8,6 +8,6 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("timer_16x.ico")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("soundfile_16x_32.bmp")]
 
 

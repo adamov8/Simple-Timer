@@ -11,4 +11,8 @@ D:\Edm\Dokumentumok\Visual Studio 2015\simple_timer\simple_timer\obj\Debug\simpl
 D:\Edm\Dokumentumok\Visual Studio 2015\simple_timer\simple_timer\obj\Debug\simple_timer.csproj.GenerateResource.Cache
 D:\Edm\Dokumentumok\Visual Studio 2015\simple_timer\simple_timer\obj\Debug\simple_timer.exe
 D:\Edm\Dokumentumok\Visual Studio 2015\simple_timer\simple_timer\obj\Debug\simple_timer.pdb
-D:\Edm\Dokumentumok\Visual Studio 2015\simple_timer\simple_timer\obj\Debug\simple_timer.csprojResolveAssemblyReference.cache
+D:\Edm\Dokumentumok\Visual Studio 2015\simple_timer\simple_timer\obj\Debug\App.baml
+D:\Edm\Dokumentumok\Visual Studio 2015\simple_timer\simple_timer\obj\Debug\NotifSelector.g.cs
+D:\Edm\Dokumentumok\Visual Studio 2015\simple_timer\simple_timer\obj\Debug\NotifSelector.baml
+D:\Edm\Dokumentumok\Visual Studio 2015\simple_timer\simple_timer\obj\Debug\simple_timer.csprojAssemblyReference.cache
+D:\Edm\Dokumentumok\Visual Studio 2015\simple_timer\simple_timer\obj\Debug\simple_timer.csproj.CoreCompileInputs.cache
