@@ -1,6 +1,6 @@
-# simple_timer
+# Simple Timer
 
-A timer WPF project with basic functionality.
-Has three nameable timers. Controls are pretty straight-forward, the UI is dark. It makes a beeping sound when the time is up and displays it next to the comboboxes.
+A timer WPF project with basic timer functionality.
 
-Made for personal use.
+> Has three nameable timers. Controls are pretty straight-forward, the UI is dark. 
+> It plays a beeping sound by default when the time is up and displays a warning it next to the comboboxes. The default notification sound can be changed to a custom one.
