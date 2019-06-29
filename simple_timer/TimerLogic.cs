@@ -83,9 +83,7 @@ namespace simple_timer
 
             timeout.Elapsed -= Timeout_Elapsed;
             timeout.Stop();
-
-            _is_running = true;
-
+                        
             start.Content = "Restart";
             start.ToolTip = "Double-click to restart";
 
@@ -102,6 +100,8 @@ namespace simple_timer
 
             notif.Stop();
             //notif.Dispose();
+
+            _is_running = true;
         }
 
         private void Timer_Elapsed(object sender, ElapsedEventArgs e)
